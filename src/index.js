@@ -16,7 +16,7 @@ const client = new Client({
 
 client.cooldowns = new Collection();
 client.commands = new Collection();
-const foldersPath = path.join(__dirname, "src/commands");
+const foldersPath = path.join(__dirname, "./commands");
 const commandFolders = fs.readdirSync(foldersPath);
 
 for (const folder of commandFolders) {
@@ -65,7 +65,7 @@ const rest = new REST().setToken(process.env.token);
   }
 })();
 
-const ceventsPath = path.join(__dirname, "src/events/client");
+const ceventsPath = path.join(__dirname, "./events/client");
 const ceventFiles = fs
   .readdirSync(ceventsPath)
   .filter((file) => file.endsWith(".js"));
